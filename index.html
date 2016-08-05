@@ -20,43 +20,11 @@
 		<img src="assets/images/kr-top.png">
 	</div>
 
-<!--iframe for LiveChatLibre-->
-	<iframe src="http://www.livechatlibre.com/livechat?embedded=true&id=7954&chat=true&background=fff" width="550" height="600" frameborder="0" scrolling="auto">
-	</iframe>
 
 <!--JQuery and Javascript-->
 <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
 <script type="text/javascript" src="logic.js"></script>
 
-<!--Live Chat Libre Code-->
-<script type='text/javascript' src='http://www.livechatlibre.com/scripts/sdk.js'></script>
-<script type='text/javascript'>
-SDK.applicationId = "4832549465852173973";
-var sdk = new SDKConnection();
-var user = new UserConfig();
-user.user = "laferal";
-user.token = "4508488308173438286";
-sdk.user = user;var livechat = new WebLiveChatListener();
-livechat.sdk = sdk;
-livechat.instance = '465372';
-livechat.instanceName = 'KaraokeChat';
-livechat.prefix = 'livechatlibrechat';
-livechat.caption = 'Chat Now';
-livechat.chatLogType = 'log';
-livechat.boxLocation = 'bottom-right';
-livechat.color = '#009900';
-livechat.background = '#fff';
-livechat.bubble = true;
-livechat.promptContactInfo = true;
-livechat.online = true;
-livechat.linkUsers = false;
-livechat.chatroom = true;
-livechat.popupURL = "http://www.livechatlibre.com/livechat?embedded=true&id=465372&chat=true&user=laferal&token=4508488308173438286&application=4832549465852173973&background=%23fff&prompt=You+say&send=Send";
-livechat.createBox();
-});
 </script>
-
-
-
 </body>
 </html>
