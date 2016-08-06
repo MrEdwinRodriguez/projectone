@@ -22,17 +22,51 @@
 			<div class="container">
 					<div class="intro-text">
 							<div class="intro-heading">
-								<img src="assets/images/kr-top.png">
+								<h1>KARAOKE ROULETTE</h1>
 							</div>
-							<a href="#game" class="btn btn-xl">Let's Play</a>
+							<a href="#game" class="btn btn-xl">Spin It</a>
 					</div>
 			</div>
 	</header>
 
+	<!-- Game Area -->
+	<div class="container" id="gameArea">
+				<!--youtube container-->
+				<div class="panel panel-info" id="video">
+							<div class="panel-heading">YouTube Video</div>
+				</div>
 
+				<!--twitter container-->
+				<div class="panel" id="twitter">
+
+							<a class="twitter-timeline"
+							  href="https://twitter.com/creativelaurels">
+							Tweets by @creativelaurels
+							</a>
+				</div>
+
+<!--Comment-->
 <!--JQuery and Javascript-->
 <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
 <script type="text/javascript" src="assets/javascript/script.js"></script>
+
+<!--Twitter-->
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
 
 </script>
 </body>
