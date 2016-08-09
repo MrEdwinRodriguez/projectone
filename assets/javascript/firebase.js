@@ -1,5 +1,14 @@
 // FIREBASE BABY! FEEL THE BURNNN
 
+// INITIALIZE FIREBASE
+  var config = {
+    apiKey: "AIzaSyCWqSA4dZIPGMcPYOfMrrnO3j29-D9CeDw",
+    authDomain: "karaoke-roulette.firebaseapp.com",
+    databaseURL: "https://karaoke-roulette.firebaseio.com",
+    storageBucket: "karaoke-roulette.appspot.com",
+  };
+  firebase.initializeApp(config);
+
 //VARIABLES
 
 // reference to the database server
@@ -35,5 +44,14 @@ database.ref().on("value", function(snapshot) {
   // console.log the thumbs up ount
   console.log(snapshot.val());
 
+  //then we change the html associated with the number
+  $("#thumbsupValue").html(snapshot.val().thumbsupCounter);
 
+  // update the thumbsupcounter varaiable with data from the database
+  thumbsupCounter = snapshot.val().clickCount;
+
+  // if you get an error, store it
+}, function (errorObject) {
+
+    console.log("the read failed: " + errorObject.code);
 });

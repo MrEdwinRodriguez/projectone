@@ -13,8 +13,9 @@
 	<!--Custom Style Sheet-->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<!-- Firebase JavaScript Link -->
-	<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
 </head>
+
 
 <body>
 
@@ -52,8 +53,15 @@
 		<img src="assets/images/emoji-votes.png">
 			<!--emoji container-->
 			<div class="col-md-12" id="emojis">
-				<p>Emoji Area / Firebase Put To Use</p>
+
+				<div id="thumbsupValue">
+
+				</div>
+
+				<div id="thumbsup">
 				<img src="assets/images/thumbs-up.png" id="thumbsupButton">
+				</div>
+
 			</div> <!--end of emojis-->
 	</div>
 
@@ -82,17 +90,5 @@
 }(document, "script", "twitter-wjs"));</script>
 </script>
 
-<!--Firebase-->
-<script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCWqSA4dZIPGMcPYOfMrrnO3j29-D9CeDw",
-    authDomain: "karaoke-roulette.firebaseapp.com",
-    databaseURL: "https://karaoke-roulette.firebaseio.com",
-    storageBucket: "karaoke-roulette.appspot.com",
-  };
-  firebase.initializeApp(config);
-</script>
 </body>
 </html>
