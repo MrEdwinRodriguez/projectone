@@ -12,6 +12,8 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<!--Custom Style Sheet-->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- Firebase JavaScript Link -->
+	<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
 </head>
 
 <body>
@@ -33,7 +35,7 @@
 	<div class="row" id="gameArea">
 				<!--youtube container-->
 				<div class="col-md-6" id="video">
-							<div class="panel-heading">YouTube Video</div>
+							<!-- <div class="panel-heading">YouTube Video</div> -->
 							<iframe width="560" height="315" src="https://www.youtube.com/embed/Ug6Mr144qrM" frameborder="0" allowfullscreen></iframe>
 				</div>
 
@@ -45,9 +47,34 @@
 
 				</div>
 
+	<!--voteArea container-->
+	<div class="row" id="voteArea">
+		<img src="assets/images/emoji-votes.png">
+			<!--emoji container-->
+			<div class="col-md-12" id="emojis">
+				<p>Emoji Area / Firebase Put To Use</p>
+				<img src="assets/images/thumbs-up.png">
+			</div> <!--end of emojis-->
+	</div>
+
+
 <!--JQuery and Javascript-->
 <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
 <script type="text/javascript" src="assets/javascript/script.js"></script>
+
+<!--Firebase-->
+<script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCWqSA4dZIPGMcPYOfMrrnO3j29-D9CeDw",
+    authDomain: "karaoke-roulette.firebaseapp.com",
+    databaseURL: "https://karaoke-roulette.firebaseio.com",
+    storageBucket: "karaoke-roulette.appspot.com",
+  };
+  firebase.initializeApp(config);
+</script>
+
 
 <!--Twitter Script-->
 <script>window.twttr = (function(d, s, id) {
@@ -66,7 +93,6 @@
 
   return t;
 }(document, "script", "twitter-wjs"));</script>
-
 </script>
 </body>
 </html>

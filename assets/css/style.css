@@ -55,3 +55,16 @@ header .intro-text {
   background-color: #fec503;
   border-color: #f6bf01;
 }
+
+#video {
+  text-align: right;
+}
+
+#emojis {
+  text-align: center;
+}
+
+#voteArea {
+  text-align: center;
+  padding: 20px;
+}
