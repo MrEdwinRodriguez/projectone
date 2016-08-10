@@ -18,6 +18,9 @@ var database = firebase.database();
 
 var initialValue = 0;
 var thumbsupCounter = 0;
+var thumbsdownCounter = 0;
+var chickenCounter = 0;
+var flatCounter = 0;
 
 
 // FUNCTIONS & EVENTS
@@ -27,10 +30,42 @@ $("#thumbsupButton").on("click", function() {
 
       // add to thumbs up button
       thumbsupCounter++;
-
       // Store click data to Firebase in a JSON property called thumbsupCount
       database.ref().set({
           thumbsupCount: thumbsupCounter
+      });
+})
+
+// on click for thumbs down
+$("#thumbsdownButton").on("click", function() {
+
+      // add to thumbs up button
+      thumbsdownCounter++;
+      // Store click data to Firebase in a JSON property called thumbsupCount
+      database.ref().set({
+          thumbsdownCount: thumbsdownCounter
+      });
+})
+
+// on click for poultry leg
+$("#chickenButton").on("click", function() {
+
+      // add to thumbs up button
+      chickenCounter++;
+      // Store click data to Firebase in a JSON property called thumbsupCount
+      database.ref().set({
+          chickenCount: chickenCounter
+      });
+})
+
+// on click for
+$("#flatButton").on("click", function() {
+
+      // add to thumbs up button
+      flatCounter++;
+      // Store click data to Firebase in a JSON property called thumbsupCount
+      database.ref().set({
+          flatCount: flatCounter
       });
 })
 
@@ -47,6 +82,9 @@ database.ref().on("value", function(snapshot) {
 
   //then we change the html associated with the number
   $("#thumbsupValue").html(snapshot.val().thumbsupCount);
+  $("#thumbsdownValue").html(snapshot.val().thumbsdownCount);
+  $("#chickenValue").html(snapshot.val().chickenCount);
+  $("#flatValue").html(snapshot.val().flatCount);
 
   // update the thumbsupcounter varaiable with data from the database
   //thumbsupCounter = snapshot.val().thumbsupCount;
