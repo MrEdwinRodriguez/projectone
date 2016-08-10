@@ -27,7 +27,7 @@
 							<div class="intro-heading">
 								<img src="assets/images/logo.png">
 							</div>
-							<button type="button" class="btn btn-xl" id="gameButton">LET'S PLAY</a>
+							<button type="button" class="btn btn-xl" id="gameButton">NEW GAME</a>
 					</div>
 			</div>
 	</header>
@@ -50,16 +50,31 @@
 
 	<!--voteArea container-->
 	<div class="row" id="voteArea">
-		<img src="assets/images/emoji-votes.png">
+
+		<div class="col-md-12" id="votesTitle">
+						<img src="assets/images/emoji-votes.png">
+		</div>
+
+		<div class="row" id="emojis">
 			<!--emoji container-->
-			<div class="col-md-12" id="emojis">
-
-				<div id="thumbsupValue">
-
+				<div id="thumbsup" class="col-md-3">
+							<div id="thumbsupValue"></div>
+							<img src="assets/images/thumbs-up.png" id="thumbsupButton">
 				</div>
 
-				<div id="thumbsup">
-				<img src="assets/images/thumbs-up.png" id="thumbsupButton">
+				<div id="thumbsdown" class="col-md-3">
+							<div id="thumbsdownValue"></div>
+							<img src="assets/images/thumbs-down.png" id="thumbsdownButton">
+				</div>
+
+				<div id="chicken" class="col-md-3">
+							<div id="chickenValue"></div>
+							<img src="assets/images/chicken.png" id="chickenButton">
+				</div>
+
+				<div id="flat" class="col-md-3">
+							<div id="flatValue"></div>
+							<img src="assets/images/flat.png" id="flatButton">
 				</div>
 
 			</div> <!--end of emojis-->
