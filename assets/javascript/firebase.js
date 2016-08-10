@@ -16,6 +16,7 @@ var database = firebase.database();
 
 // setting initial value of the emojis
 
+var initialValue = 0;
 var thumbsupCounter = 0;
 
 
@@ -36,7 +37,7 @@ $("#thumbsupButton").on("click", function() {
 
 // MAIN PROCESS & INITIAL CODE
 
-//retrieve the data from the database and store count of
+// retrieve the data from the database and store count of
 // store the data inside a variable called snapshot
 
 database.ref().on("value", function(snapshot) {
@@ -45,10 +46,10 @@ database.ref().on("value", function(snapshot) {
   console.log(snapshot.val());
 
   //then we change the html associated with the number
-  $("#thumbsupValue").html(snapshot.val().thumbsupCounter);
+  $("#thumbsupValue").html(snapshot.val().thumbsupCount);
 
   // update the thumbsupcounter varaiable with data from the database
-  thumbsupCounter = snapshot.val().clickCount;
+  //thumbsupCounter = snapshot.val().thumbsupCount;
 
   // if you get an error, store it
 }, function (errorObject) {
