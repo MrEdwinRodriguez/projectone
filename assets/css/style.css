@@ -68,3 +68,21 @@ header .intro-text {
   text-align: center;
   padding: 20px;
 }
+
+#collect_info{
+
+  background-color: #fed136;
+  color: black;
+  text-align: center;
+  width: 20%;
+  margin: auto;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  border-radius: 25px
+  
+}
+
+#sumbit_btn{
+  padding-top: 5px;
+  margin-top: 5px;
+}
